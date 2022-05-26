@@ -36,7 +36,7 @@ input[type=text] {
     outline: none;
     border-radius: 5rem;
     text-align: center;
-    width: 150px
+    width: 150px;
 }
 input[type=button] {
     background-color: #ecf0f1;
