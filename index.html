@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Google Trends Game</title>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <header>
+            <button><a href="https://trends.google.com/trends/explore?date=today%201-m" target="_blank">Google Trends</a></button>
+            <p>Use the link above to go to the google trends site, this webpage is for
+                generating words and keeping score.
+            </p>
+        </header>
+
+        <main>
+            <div class="row">
+                <div class="column">
+                    <h1 id="WordDisplay">Generate a word</h1>
+                    <button id="generate">Generate</button>
+                    <br>
+                    <h2 id="timer">30 Seconds</h2>
+                    <button id="timeStart">Start Timer</button>
+                </div>
+
+                <div class="column">
+                    <h1>How Many People Are Playing?</h1>
+                    <form id="frm1" action="/action_page.php">
+                        Player 1: <input type="text" name="pl1"><br>
+                        Player 2: <input type="text" name="pl2"><br>
+                        Player 3: <input type="text" name="pl3"><br>
+                        Player 4: <input type="text" name="pl4"><br>
+                        Player 5: <input type="text" name="pl5"><br>
+                        <input type="button" onclick="getPlayers()" value="Create Players">
+                      </form> 
+                     <br>
+                      <table id="table">
+                          <tr>
+                            <td></td>
+                            <th id="PL0">Player 1</th>
+                            <th id="PL1">Player 2</th>
+                            <th id="PL2">Player 3</th>
+                            <th id="PL3">Player 4</th>
+                            <th id="PL4">Player 5</th>
+                          </tr>
+                          <tr>
+                            <th>Total</th>
+                            <td id="plScore1"></td>
+                            <td id="plScore2"></td>
+                            <td id="plScore3"></td>
+                            <td id="plScore4"></td>
+                            <td id="plScore5"></td>   
+                          </tr>
+
+                          <tr>
+                            <th>Round 1</th>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                          </tr>
+                          <tr>
+                            <th>Round 2</th>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <th>Round 3</th>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <th>Round 4</th>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <th>Round 5</th>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <th>Round 6</th>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                          </tr>
+                          <tr>
+                            <th>Round 7</th>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <th>Round 8</th>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <th>Round 9</th>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <th>Round 10</th>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                        </tr>
+                      </table>
+                      <input type="button" onclick="calcScore()" value="Calculate Score">
+                      <br>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <h1>Rules:</h1>
+            <p>The Google Trends game is about competing with your friends to try and guess the most searched
+                terms across the world.
+            </p>
+            <ul>
+                <li>To start, open the link to the google trends page at the top of the screen. This is where
+                    you will enter in search terms, and determine the points. Google trends allows you to type
+                    in search terms, and see how many people have searched that term in a given time period. 
+                    For this game, you will be looking at search terms worldwide over the past 30 days.
+                </li>
+                <br>
+                <li>Once you have opened the google trends page, enter the names of the people playing in the 
+                    text boxes for the player numbers. When you are done, click on "Create Players", and you 
+                    should see the names update on the table below. For games with more then 5 players, it 
+                    is recommended to split into teams.
+                </li>
+                <br>
+                <li>Use the "Generate" button to generate a random word to use as a prompt. Once the random 
+                    word has been chosen, players will have 30 seconds to come up with a word to pair with that
+                    promt. For example, if the promt is "Water", you might come up with "Water Bottle", or 
+                    "Sea Water". You can use the "Start Timer" button to help you keep track of time.
+                </li>
+                <br>
+                <li>Once the time is up, go over to the google trends tab you opened earlier, and type in 
+                    everyones phrases that they have come up with. Phrases must consist of the prompt word, 
+                    alongside ONE other word, seperated by a space (You can't get the word "swim" and have 
+                    your phrase be "Swimming"). Players cannot use the same search terms as each other, so 
+                    make sure you come up with a few extras. The person with the LOWEST total score goes
+                    first, up to the person with the highest score.
+                </li>
+                <br>
+                <li>Once all the search terms have been entered, you should see multiple trend lines on the screen 
+                    in the google trends tab. Players recieve points based on the average number of searches their 
+                    term got, shown in the bar graph on the left hand side of the screen. Enter each players points
+                    in the table under the column with their name, then click "Calculate Score". The scores will 
+                    be added up and displayed in the "Total" row directly underneath the players names. The 
+                    player with the highest score at the end of 10 rounds wins!
+                </li>
+            </ul>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+html {
+    padding: 0;
+    margin: 0;
+    color: #ecf1ed;
+    background-color: rgb(23, 24, 37);
+    font-family: 'Fjalla One', sans-serif;
+    animation: fadein 1.5s;
+}
+header {
+    margin: 15px;
+}
+body {
+    margin: 0;
+}
+footer {
+    margin: 15px;
+}
+
+h1 {
+    color: #fff239;
+}
+
+input[type=number] {
+    background-color: rgba(52, 73, 94, 0.5);
+    color: #ecf0f1;
+    border: none;
+    outline: none;
+    border-radius: 5rem;
+    text-align: center;
+    width: 100px
+}
+input[type=text] {
+    background-color: rgba(52, 73, 94, 0.5);
+    color: #ecf0f1;
+    border: none;
+    outline: none;
+    border-radius: 5rem;
+    text-align: center;
+    width: 150px
+}
+input[type=button] {
+    background-color: #ecf0f1;
+    border: none;
+    outline: none;
+    border-radius: 5rem;
+    text-align: center;
+    
+}
+input[type=button]:hover {
+    background-color: #35b5ff;
+    border: 2px solid rgb(0, 63, 157);
+    border-radius: 0.5rem;
+    
+}
+* {
+    box-sizing: border-box;
+}
+button {
+    border: none;
+    background-color: rgb(233, 233, 233);
+    width: 20vw;
+    height: 10vh;
+    padding: 0.5rem 0;
+    margin: 0.25vmax;
+    font-size: 2rem;
+    border-radius: 0.5rem;   
+}
+button:hover {
+    background-color: #35b5ff;
+    border: 5px solid rgb(0, 63, 157);
+    border-radius: 0.5rem;
+}
+
+td {
+    text-align: center;
+}
+.column {
+    float: left;
+    width: 50%;
+    padding:15px;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width:1000px){
+    .column {
+        width: 100%;
+    }
+}
